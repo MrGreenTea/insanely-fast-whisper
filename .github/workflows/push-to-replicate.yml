@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Free Disk Space (Ubuntu)  # docker/cog build takes a LOT of space
+        uses: jlumbroso/free-disk-space@v1.3.1
+            
       - name: Check out code
         uses: actions/checkout@v3
 
